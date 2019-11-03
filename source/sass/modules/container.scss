@@ -1,0 +1,14 @@
+/* CONTAINER */
+.container {
+  position: relative;
+  min-width: 320px;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: $desktop_s) {
+  .container {
+    padding: 0 60px;
+  }
+} 

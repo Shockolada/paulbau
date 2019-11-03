@@ -1,0 +1,9 @@
+.page-content {
+  padding-top: 130px;
+}
+
+@media (min-width: $desktop_xs) { 
+  .page-content {
+    padding-top: 190px;
+  }
+}

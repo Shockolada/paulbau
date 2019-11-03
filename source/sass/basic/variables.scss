@@ -1,0 +1,34 @@
+// MOBILE FIRST BREAKPOINTS
+$mobile_s: 320px;
+$mobile_m: 375px;
+$mobile_l: 425px;
+$tablet_s: 560px;
+$tablet: 768px;
+$desktop_xs: 940px;
+$desktop_s: 1200px;
+$desktop_m: 1440px;
+$desktop_l: 1920px;
+$desktop_4k: 2560px;
+
+$max-width: 1920px;
+
+
+// RETINA DISPLAY
+$retina-dpi: 144dpi;    // Mobile & Desktop 2x
+$retina-dppx: 1.5dppx;  // Mobile & Desktop 2x
+$retina-dpi: 192dpi;    // Desktop Only 2x
+$retina-dppx: 2dppx;    // Desktop Only 2x
+
+
+// FONTS
+$font: "FontFamily", "Arial", sans-serif;
+
+
+// COLORS
+$color-text: #000000;
+$color-white: #ffffff;
+$color-accent: #ffd700;
+
+$color-blue: #075a90;
+$color-green: #42b75b;
+$color-orange: #f9a033;
