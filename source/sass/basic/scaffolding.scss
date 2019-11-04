@@ -21,3 +21,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+@media (min-width: $tablet) {
+  body {
+    font-size: 20px;
+  }
+}

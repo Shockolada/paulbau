@@ -144,7 +144,7 @@ gulp.task("imagesmin", function () {
 });
 
 /* IMAGES */
-gulp.task('images', gulp.series('svgsprite', 'pngsprite', 'imagesmin', function (done) {
+gulp.task('images', gulp.series('pngsprite', 'imagesmin', function (done) {
   done();
 }));
 

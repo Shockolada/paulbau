@@ -1,0 +1,24 @@
+.social {
+  display: flex;
+  justify-content: center;
+  @include list-reset;
+  margin-right: -25px;
+}
+
+.social__item {
+  margin-right: 25px;
+}
+
+.social__icon {
+  fill: $color-blue;
+  transition: 0.2s transform linear, 0.2s fill linear;
+}
+
+.social__link:hover,
+.social__link:focus {
+
+  .social__icon {
+    fill: $color-accent;
+    transform: scale(1.3);
+  }
+}

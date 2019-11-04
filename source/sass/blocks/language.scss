@@ -1,0 +1,27 @@
+.language__wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.language {
+  border: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: 0.2s color linear;
+
+  option {
+    // text-transform: none;
+  }
+}
+
+.language:hover,
+.language:focus {
+  outline: none;
+  color: $color-accent;
+
+  option {
+    color: $color-text;
+  }
+}

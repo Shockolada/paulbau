@@ -1,15 +1,47 @@
 .main-nav {
-  @include list-reset;
 }
 
-.main-nav__item {}
+.main-nav__list {
+  @include list-reset;
+  margin-bottom: -10px;
+}
+
+.main-nav__item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
 
 .main-nav__link {
-
+  position: relative;
+  padding: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: $color-text;
   cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 5px;
+    bottom: 3px;
+    width: calc(100% - 10px);
+    width: 0;
+    height: 1px;
+    background-color: $color-accent;
+    transition: 0.2s linear;
+  }
 }
 
 .main-nav__link:hover,
-.main-nav__link:focus {}
+.main-nav__link:focus,
+.main-nav__link.active {
+
+  &::after {
+    width: calc(100% - 10px);
+    left: 5px;
+  }
+}
 
 .main-nav__link.active {}
