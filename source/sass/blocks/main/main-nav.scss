@@ -45,3 +45,15 @@
 }
 
 .main-nav__link.active {}
+
+@media (min-width: $desktop_s) {
+  .main-nav__list {
+    display: flex;
+    margin: 0;
+  }
+
+  .main-nav__item {
+    margin: 0;
+    margin-right: 40px;
+  }
+}

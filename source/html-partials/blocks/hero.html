@@ -1,17 +1,24 @@
-<div class="hero__wrap setion">
+<div class="hero__wrap">
   <!-- Slider main container -->
   <div class="swiper-container hero-slider">
     <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <div class="swiper-slide hero-slider__slide" style="background-image:'img/hero-bg.jpg';">Slide 1</div>
+    <div class="swiper-wrapper hero-slider__list">
+      <div class="swiper-slide hero-slider__slide" style="background-image:url('img/hero-bg.jpg');"></div>
+      <div class="swiper-slide hero-slider__slide" style="background-image:url('img/footer.jpg');"></div>
     </div>
 
     <div class="container hero">
       <!-- If we need navigation buttons -->
       <div class="hero-slider__btn hero-slider__btn-prev">
+        <svg class="hero-slider__arrow" width="28" height="28">
+          <use xlink:href="img/sprite.svg#left-arrow"></use>
+        </svg>
         <div class="hero-slider__preview"></div>
       </div>
       <div class="hero-slider__btn hero-slider__btn-next">
+        <svg class="hero-slider__arrow" width="28" height="28">
+          <use xlink:href="img/sprite.svg#right-arrow"></use>
+        </svg>
         <div class="hero-slider__preview"></div>
       </div>
 
@@ -24,4 +31,3 @@
   </div>
 </div>
 <!-- /.hero__wrap -->
-

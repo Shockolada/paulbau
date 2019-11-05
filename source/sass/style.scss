@@ -8,10 +8,12 @@
 @import "mixins/mixins.scss";
 
 /* LIBRARIES */
+@import "libs/swiper.scss";
 
 /* MODULES */
 @import "modules/page-content.scss";
 @import "modules/container.scss";
+@import "modules/section.scss";
 @import "modules/modal.scss";
 @import "modules/overlay.scss";
 @import "modules/button.scss";
@@ -19,6 +21,8 @@
 @import "modules/hamburger-btn.scss";
 @import "modules/link.scss";
 @import "modules/title.scss";
+@import "modules/combs.scss";
+@import "modules/webit.scss";
 
 /* BLOCKS */
 @import "blocks/main/page-header.scss";
@@ -29,3 +33,6 @@
 @import "blocks/contacts-list.scss";
 @import "blocks/social.scss";
 @import "blocks/language.scss";
+@import "blocks/main/page-content.scss";
+@import "blocks/hero.scss";
+@import "blocks/hero-slider.scss";

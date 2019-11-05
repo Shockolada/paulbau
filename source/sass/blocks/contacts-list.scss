@@ -30,7 +30,29 @@
   }
 }
 
+.contacts-list--white {
+  .contacts-list__link {
+    color: #ffffff;
+  }
+
+  .contacts-list__icon {
+    fill: #ffffff;
+  }
+
+  .contacts-list__link:hover,
+  .contacts-list__link:focus {
+    .contacts-list__icon {
+      fill: #ffffff;
+    }
+  }
+}
+
 @media (min-width: $desktop_s) {
+  .contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .contacts-list__item {
     margin-right: 20px;
   }

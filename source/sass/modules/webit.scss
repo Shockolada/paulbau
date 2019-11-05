@@ -1,0 +1,23 @@
+.webit-logo {
+  display: block;
+  width: 56px;
+  height: 14px;
+
+  background-image: url("../img/webit-logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  transition: background-position 0.3s linear;
+}
+
+.webit-logo:hover {
+  background-position: top center;
+}
+
+@media (min-width: $desktop_s) {
+  .webit {
+    align-self: flex-end;
+    margin: 0;
+    margin-left: auto;
+  }
+}
