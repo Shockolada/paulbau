@@ -104,10 +104,12 @@
 .hero-slider__preview {
   width: 120px;
   height: 100%;
-  outline: 1px solid #ffffff;
+  // outline: 1px soSlid #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.2s linear;
 }
-
-
 
 .hero-slider__btn-next {
   .hero-slider__preview {
