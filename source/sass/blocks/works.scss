@@ -1,0 +1,28 @@
+.works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .button {
+    margin-top: 50px;
+  }
+}
+
+.works__gallery {
+  width: 100%;
+}
+
+@media (min-width: $mobile_l) {
+  .works {}
+
+  .works__gallery {
+    width: 100%;
+    margin-right: -10px;
+  }
+}
+
+@media (min-width: $mobile_l) {
+  .works__gallery {
+    margin-right: -20px;
+  }
+}

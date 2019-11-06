@@ -15,5 +15,11 @@
   border: 1px solid #ffffff;
 }
 
+.button--transparent-color {
+  border: 1px solid $color-accent;
+  color: $color-accent;
+  background-color: transparent;
+}
+
 .button:hover,
 .button:focus {}

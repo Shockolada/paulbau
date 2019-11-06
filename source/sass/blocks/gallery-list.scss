@@ -1,0 +1,134 @@
+.gallery-list {
+  @include list-reset
+}
+
+.gallery-list__item {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.gallery-list__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 61%;
+
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#436477, 0.4);
+
+    transition: 0.3s background-color linear;
+  }
+}
+
+.gallery-list__title {
+  position: absolute;
+  top: 13px;
+  left: 17px;
+  right: 17px;
+  bottom: 13px;
+
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  padding-left: 10px;
+
+  span {
+    opacity: 0;
+    transition: 0.2s opacity 0.2s linear;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -3px;
+    width: 1px;
+    height: calc(100% + 6px);
+    height: 0;
+    background-color: #ffffff;
+
+    transition: 0.3s height linear, bottom .3s linear;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -3px;
+    right: 30%;
+
+    bottom: 0;
+    width: 70%;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+
+    transition: 0.3s width linear, left .3s linear;
+  }
+}
+
+.gallery-list__link:hover,
+.gallery-list__link:focus {
+  &::before {
+    background-color: rgba(#e25a5a, 0.4);
+  }
+
+  .gallery-list__title {
+    span {
+      opacity: 1;
+    }
+
+    &::before {
+      height: calc(100% + 6px);
+      bottom: -3px;
+      top: unset;
+    }
+
+    &::after {
+      width: 70%;
+      left: -3px;
+    }
+  }
+}
+
+@media (min-width: $mobile_l) {
+  .gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery-list__item {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .gallery-list__item {
+    width: calc(100% / 3 - 10px);
+  }
+}
+
+@media (min-width: $desktop_xs) {
+  .gallery-list__item {
+    width: calc(100% / 4 - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}

@@ -5,30 +5,39 @@
       <p class="note">Suntem în activitate din 2000</p>
       <p class="about__short-descr">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
         piece of classical Latin literature from 45 BC.</p>
-        <a class="about__btn button" href="about.html">Citește mai mult</a>
+      <a class="about__btn button button--transparent-color" href="about.html">Citește mai mult</a>
     </div>
 
 
     <!-- Slider -->
-    <div class="swiper-container about__slider slider">
+    <div class="swiper-container about__slider about-slider slider">
       <div class="swiper-wrapper">
         <!-- Slides -->
         <div class="swiper-slide slider__slide">
-          <img class="slider__img" src="img/slider-small.jpg" alt="">
-          <div class="slider__shadow"></div>
+          <div class="slider__shadow" data-swiper-parallax="-700"></div>
+          <!-- Фотки 370 х 425 пх -->
+          <img class="slider__img" data-swiper-parallax="-300" src="img/slider-small.jpg" alt="">
         </div>
         <div class="swiper-slide slider__slide">
-          <img class="slider__img" src="img/slider-small.jpg" alt="">
-          <div class="slider__shadow"></div>
+          <div class="slider__shadow" data-swiper-parallax="-700"></div>
+          <img class="slider__img" data-swiper-parallax="-300" src="img/slider-small.jpg" alt="">
+        </div>
+        <div class="swiper-slide slider__slide">
+          <div class="slider__shadow" data-swiper-parallax="-700"></div>
+          <img class="slider__img" data-swiper-parallax="-300" src="img/slider-small.jpg" alt="">
+        </div>
+        <div class="swiper-slide slider__slide">
+          <div class="slider__shadow" data-swiper-parallax="-700"></div>
+          <img class="slider__img" data-swiper-parallax="-300" src="img/slider-small.jpg" alt="">
         </div>
       </div>
 
       <!-- pagination -->
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination slider__pagination"></div>
 
       <!-- counter -->
       @@include('../modules/slider-counter.html')
-      
+
     </div>
     <!-- /.slider -->
 

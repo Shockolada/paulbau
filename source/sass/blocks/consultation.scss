@@ -1,0 +1,36 @@
+.consultation__wrap {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#8b8b8e, 0.8);
+    background-image: radial-gradient(circle closest-side, rgba(250,250,250,0) 0%, rgb(67,100,119) 100%);
+    opacity: 0.6;
+  }
+}
+
+.consultation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .button {
+    margin-top: 40px;
+  }
+}
+
+.consultation__info {
+  max-width: 700px;
+  margin: 0;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}

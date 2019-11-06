@@ -1,0 +1,41 @@
+.about__wrap {
+  background-color: $color-bg;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.about__short-descr {
+  margin: 30px 0;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: $color-text-gray;
+}
+
+@media (min-width: $desktop_xs) {
+  .about {
+    display: flex;
+  }
+
+  .about__content {
+    width: 50%;
+    margin-bottom: 0;
+    padding: 0 50px;
+    padding-top: 50px;
+  }
+
+  .about__slider {
+    width: 50%;
+  }
+}
+
+@media (min-width: $desktop_s) {
+  .about__content {
+    padding: 0 100px;
+    padding-top: 50px;
+  }
+}

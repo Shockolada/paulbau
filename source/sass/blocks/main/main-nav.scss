@@ -56,4 +56,12 @@
     margin: 0;
     margin-right: 40px;
   }
+
+  .main-nav__link {
+    padding-bottom: 0;
+
+    &::after {
+      bottom: 0;
+    }
+  }
 }

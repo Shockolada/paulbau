@@ -1,0 +1,45 @@
+.features__list {
+  @include list-reset;
+}
+
+.features__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  padding-left: 65px;
+}
+
+.features__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 55px;
+  height: 55px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.features__title {
+  // display: flex;
+  // align-items: center;
+  // min-height: 55px;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 25px;
+}
+
+.features__text {
+  margin: 0;
+}
+
+@media (min-width: $tablet) {
+  .features__item {
+    margin-bottom: 60px;
+  }
+
+  .features__title {
+    font-style: 35px;
+  }
+}

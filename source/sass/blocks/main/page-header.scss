@@ -101,6 +101,7 @@
   }
 
   .page-header__left {
+    width: 205px;
     flex-grow: 0;
     padding-top: 40px;
   }
@@ -115,7 +116,7 @@
     position: relative;
     order: 1;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
     z-index: 1;
     display: flex;
     margin-left: -20px;
@@ -138,6 +139,7 @@
   .page-header__contacts {
     flex-direction: row;
     margin-bottom: 0;
+    margin-right: auto;
 
     ul {}
   }
@@ -161,5 +163,9 @@
 
   .page-header__menu-toggle {
     display: none;
+  }
+
+  .page-header__lang {
+    margin-left: 35px;
   }
 }

@@ -1,20 +1,31 @@
+.combs__wrap {
+  width: calc(100% + 30px);
+  margin-left: -15px;
+}
+
 .combs {
   @include list-reset;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .combs__item {
-  width: 195px;
+  width: 200px;
   height: 225px;
   padding: 30px 10px;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.35);
-  background-color: $color-bg;
+  // clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  // box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.35);
+  // background-color: $color-bg;
 }
 
 .combs__item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url('../img/comb-bg.png');
+  background-position: center;
+  background-size: contain;
 }
 
 .combs__icon {
@@ -32,10 +43,29 @@
   text-align: center;
 }
 
-@media (min-width: $mobile_l - 1px) {
+@media (max-width: $tablet_s - 1px) {
+  .combs__item:not(:first-of-type) {
+    margin-top: -45px;
+  }
+
+  .combs__item:nth-of-type(2n) {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $mobile_l) {
+  .combs {
+    width: 400px;
+  }
+
+  .combs__item:not(:first-of-type) {
+    margin-top: -60px;
+  }
+
   .combs__item {
     width: 250px;
-    min-height: 280px;
+    height: 280px;
+    padding: 50px 10px;
   }
 
   .combs__icon {
@@ -44,25 +74,53 @@
   }
 }
 
-@media (min-width: $mobile_s) and (max-width: $tablet_s - 1px) {
-  .combs__item:nth-of-type(2n) {
-    transform: translateX(50%);
-    margin-top: -50px;
+@media (min-width: $tablet_s) and (max-width: $tablet - 1px) {
+  .combs {
+    width: 530px;
+  }
+
+  .combs__item {
+    display: inline-flex;
+  }
+
+  .combs__item:nth-of-type(3n-2) {
+    margin-right: 5px;
+  }
+
+  .combs__item:nth-of-type(3n) {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-@media (min-width: $tablet_s) {
-  .combs__item {}
-}
-
-@media (min-width: $tablet) {
-  .combs__item {}
-}
-
-@media (min-width: $desktop_xs) {
-  .combs__item {}
+@media (min-width: $tablet)and (max-width: $desktop_s - 1px) {
+  .combs {
+    width: 778px;
+    padding: 5px;
+  }
+  .combs__item {
+    display: inline-flex;
+    margin-right: 5px;
+    margin: 0;
+  }
+  .combs__item:nth-of-type(4n) {
+    margin-left: 128px;
+  }
+  // .combs__item:nth-of-type(4n - 1) {
+  //   margin-left: 135px;
+  // }
 }
 
 @media (min-width: $desktop_s) {
-  .combs__item {}
+  .combs {
+    width: 1100px;
+    padding: 10px;
+  }
+  .combs__item {
+    display: inline-flex;
+  }
+  .combs__item:nth-of-type(7n - 6) {
+    margin-left: 128px;
+  }
 }

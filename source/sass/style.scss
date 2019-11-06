@@ -14,14 +14,19 @@
 @import "modules/page-content.scss";
 @import "modules/container.scss";
 @import "modules/section.scss";
+@import "modules/intro.scss";
 @import "modules/modal.scss";
 @import "modules/overlay.scss";
+@import "modules/slider.scss";
+@import "modules/slider-counter.scss";
 @import "modules/button.scss";
 @import "modules/close-btn.scss";
 @import "modules/hamburger-btn.scss";
 @import "modules/link.scss";
 @import "modules/title.scss";
 @import "modules/combs.scss";
+@import "modules/note.scss";
+@import "modules/short-descr.scss";
 @import "modules/webit.scss";
 
 /* BLOCKS */
@@ -36,3 +41,10 @@
 @import "blocks/main/page-content.scss";
 @import "blocks/hero.scss";
 @import "blocks/hero-slider.scss";
+@import "blocks/about.scss";
+@import "blocks/works.scss";
+@import "blocks/gallery-list.scss";
+@import "blocks/consultation.scss";
+@import "blocks/about-offers.scss";
+@import "blocks/about-in-num.scss";
+@import "blocks/features.scss";
