@@ -11,7 +11,7 @@ $(document).ready(function () {
     init: false,
     speed: 600,
     slidesPerView: 1,
-    loop: true,
+    // loop: true,
     autoplay: {
       delay: 5000
     },
@@ -21,6 +21,7 @@ $(document).ready(function () {
     },
   });
 
+  
   var heroSlidesAll = $('.hero-slider__slide');
   var heroSlidePrev = heroSlidesAll.last();
   var heroSlideNext = heroSlidesAll.eq(1);
@@ -35,12 +36,14 @@ $(document).ready(function () {
   heroSlider.init();
 
   heroSlider.on("slideChange", function () {
-    heroSlidePrev = $('.swiper-slide-prev');
-    heroSlideNext = $('.swiper-slide-next');
-    heroSlideNextImg = heroSlideNext.css('background-image');
-    heroSlidePrevImg = heroSlidePrev.css('background-image');
-    heroSliderBtnNext.css('background-image', heroSlideNextImg);
-    heroSliderBtnPrev.css('background-image', heroSlidePrevImg);
+    setTimeout(function () {
+      heroSlidePrev = $('.swiper-slide-prev');
+      heroSlideNext = $('.swiper-slide-next');
+      heroSlideNextImg = heroSlideNext.css('background-image');
+      heroSlidePrevImg = heroSlidePrev.css('background-image');
+      heroSliderBtnNext.css('background-image', heroSlideNextImg);
+      heroSliderBtnPrev.css('background-image', heroSlidePrevImg);
+    }, 50)
   });
 
   var aboutSlider = new Swiper('.about-slider', {
@@ -48,7 +51,7 @@ $(document).ready(function () {
     speed: 600,
     parallax: true,
     slidesPerView: 1,
-    loop: true,
+    // loop: true,
     autoplay: {
       delay: 5000
     },
@@ -63,17 +66,17 @@ $(document).ready(function () {
 
   var slideAllEl = ($('.about-slider .swiper-wrapper .swiper-slide')).length;
 
-  
+
   slideCounterAll.text(slideAllEl);
-  
+
   aboutSlider.init();
-  
-  // aboutSlider.on('slideChange', function () {
-  //   setTimeout(function () {
-  //     var slideCurrentEl = (($('.about-slider .swiper-wrapper .swiper-slide-active')).index() + 1);
-  //     slideCounterCurrent.text(slideCurrentEl);
-  //   }, 50)
-  //   console.log(slideCurrentEl);
-  // });
+
+  aboutSlider.on('slideChange', function () {
+    setTimeout(function () {
+      var slideCurrentEl = (($('.about-slider .swiper-wrapper .swiper-slide-active')).index() + 1);
+      slideCounterCurrent.text(slideCurrentEl);
+      console.log(slideCurrentEl);
+    }, 50)
+  });
 
 });

@@ -120,7 +120,7 @@ gulp.task("svgsprite", function () {
 /* MINIFY IMAGES */
 gulp.task("imagesmin", function () {
   return gulp.src("source/images/**/*.{png,jpg,svg}")
-    .pipe(newer("build/images"))                        // Пропускает только новые изображения, или если дата модификации более поздняя
+    .pipe(newer("build/img"))                        // Пропускает только новые изображения, или если дата модификации более поздняя
     // (cache                                           //
     .pipe(imagemin([                                    // Минификация изображений
         imagemin.optipng({                              // Оптимизация png
