@@ -1,0 +1,12 @@
+@media (min-width: $desktop_xs) {
+  .contacts {
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  .contacts__info {
+    width: 350px;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+}

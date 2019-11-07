@@ -24,10 +24,12 @@
 @import "modules/hamburger-btn.scss";
 @import "modules/link.scss";
 @import "modules/title.scss";
+@import "modules/subtitle.scss";
 @import "modules/combs.scss";
 @import "modules/note.scss";
 @import "modules/short-descr.scss";
 @import "modules/webit.scss";
+@import "modules/captcha.scss";
 
 /* BLOCKS */
 @import "blocks/main/page-header.scss";
@@ -35,7 +37,9 @@
 @import "blocks/main/main-nav.scss";
 @import "blocks/main/page-footer.scss";
 
+@import "blocks/form.scss";
 @import "blocks/contacts-list.scss";
+@import "blocks/contacts-info.scss";
 @import "blocks/social.scss";
 @import "blocks/language.scss";
 @import "blocks/main/page-content.scss";
@@ -48,3 +52,6 @@
 @import "blocks/about-offers.scss";
 @import "blocks/about-in-num.scss";
 @import "blocks/features.scss";
+@import "blocks/services.scss";
+@import "blocks/map.scss";
+@import "blocks/contacts.scss";

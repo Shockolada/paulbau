@@ -1,0 +1,35 @@
+.form {}
+
+.form__item {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid $color-blue;
+  }
+
+  textarea {
+    height: 120px;
+    resize: none;
+  }
+}
+
+@media (min-width: $tablet) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+  } 
+  .form__item--m {
+    width: calc(50% - 10px);
+    margin-right: 20px;
+  }
+
+  .form__item--m:nth-last-of-type(even) {
+    margin-right: 0;
+  }
+}
+
