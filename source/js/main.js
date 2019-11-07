@@ -75,8 +75,12 @@ $(document).ready(function () {
     setTimeout(function () {
       var slideCurrentEl = (($('.about-slider .swiper-wrapper .swiper-slide-active')).index() + 1);
       slideCounterCurrent.text(slideCurrentEl);
-      console.log(slideCurrentEl);
     }, 50)
+  });
+
+  $('[data-fancybox="gallery"]').fancybox({
+    transitionEffect: "slide",
+    // animationEffect: "zoom",
   });
 
 });

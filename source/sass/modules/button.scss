@@ -1,4 +1,6 @@
 .button {
+  position: relative;
+  z-index: 1;
   padding: 15px 20px;
   border: none;
   font-weight: 500;
@@ -8,6 +10,25 @@
   color: #ffffff;
   cursor: pointer;
   background-color: $color-btn;
+
+  overflow: hidden;
+  transition: 0.4s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: -1;
+    width: 120%;
+    height: 0;
+    padding-bottom: 120%;
+    border-radius: 50%;
+    background-color: $color-accent;
+
+    transition: 0.4s transform linear;
+  }
 }
 
 .button--transparent {
@@ -22,4 +43,13 @@
 }
 
 .button:hover,
-.button:focus {}
+.button:focus {
+  &::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.button--transparent-color:hover,
+.button--transparent-color:focus {
+  color: #ffffff;
+}

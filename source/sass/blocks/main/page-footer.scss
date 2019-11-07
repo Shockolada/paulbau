@@ -121,13 +121,13 @@
   background-color: $color-bg;
 
   a {
+    font-weight: 500;
     color: $color-text;
     text-decoration: none;
   }
 
   a:hover,
   a:focus {
-    font-weight: 500;
     color: $color-blue;
     text-decoration: underline;
   }
