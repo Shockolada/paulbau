@@ -23,6 +23,10 @@
   background-position: center;
   background-size: cover;
 
+  img {
+    width: 100%;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -46,7 +50,7 @@
   display: flex;
   align-items: flex-end;
   margin: 0;
-  padding-left: 10px;
+  padding: 5px 10px;
 
   span {
     opacity: 0;

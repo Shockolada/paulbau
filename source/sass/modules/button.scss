@@ -13,22 +13,22 @@
 
   overflow: hidden;
   transition: 0.4s;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    z-index: -1;
-    width: 120%;
-    height: 0;
-    padding-bottom: 120%;
-    border-radius: 50%;
-    background-color: $color-accent;
+.button__hover {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  background: $color-accent;
+  border-radius: 100%;
+  border: 1px solid $color-accent;
+  overflow: hidden;
 
-    transition: 0.4s transform linear;
-  }
+  // transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
 }
 
 .button--transparent {
@@ -42,14 +42,34 @@
   background-color: transparent;
 }
 
-.button:hover,
-.button:focus {
-  &::before {
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
 .button--transparent-color:hover,
 .button--transparent-color:focus {
   color: #ffffff;
+  background-color: $color-btn;
+}
+
+.button__hover.active {
+  animation: ripple 1s ease forwards;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 1px 3px 4px 1px rgba(0,0,0, 0.8);
+}
+
+.button:focus {
+  transform: translateY(0);
+  box-shadow: 1px 3px 4px 1px rgba(0,0,0, 0.0);
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(300);
+    opacity: 0;
+  }
 }

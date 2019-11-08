@@ -1,4 +1,17 @@
 $(document).ready(function () {
+
+  $(".button").hover(function (event) {
+    $(this).find(".button__hover").css({
+      // left: event.pageX - $(this).position().left,
+      // top: event.pageY - $(this).position().top,
+    }).addClass('active');
+  });
+
+  $(".button").mouseleave(function (event) {
+    $(this).find(".button__hover").removeClass('active');
+  });
+
+
   $('.menu__toggle').click(function () {
     $(this).toggleClass('active');
     $('.menu').toggleClass('active');
@@ -6,7 +19,6 @@ $(document).ready(function () {
 
 
   // SLIDERS
-
   var heroSlider = new Swiper('.hero-slider', {
     init: false,
     speed: 600,
@@ -21,7 +33,7 @@ $(document).ready(function () {
     },
   });
 
-  
+
   var heroSlidesAll = $('.hero-slider__slide');
   var heroSlidePrev = heroSlidesAll.last();
   var heroSlideNext = heroSlidesAll.eq(1);
